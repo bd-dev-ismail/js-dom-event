@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Comment</title>
+</head>
+<body>
+    <h1>Welcome to our web page</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus quae impedit officiis dicta similique repellendus fugiat consequatur nesciunt accusantium sunt provident nostrum mollitia, nihil culpa voluptatum doloremque ipsum ipsam dolore consectetur praesentium natus laboriosam quo fuga? Laudantium quibusdam commodi exercitationem facilis dolorem ullam rem voluptatem soluta, eveniet aliquid officiis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus quae impedit officiis dicta similique repellendus fugiat consequatur nesciunt accusantium sunt provident nostrum mollitia, nihil culpa voluptatum doloremque ipsum ipsam dolore consectetur praesentium natus laboriosam quo fuga? Laudantium quibusdam commodi exercitationem facilis dolorem ullam rem voluptatem soluta, eveniet aliquid officiis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus quae impedit officiis dicta similique repellendus fugiat consequatur nesciunt accusantium sunt provident nostrum mollitia, nihil culpa voluptatum doloremque ipsum ipsam dolore consectetur praesentium natus laboriosam quo fuga? Laudantium quibusdam commodi exercitationem facilis dolorem ullam rem voluptatem soluta, eveniet aliquid officiis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus quae impedit officiis dicta similique repellendus fugiat consequatur nesciunt accusantium sunt provident nostrum mollitia, nihil culpa voluptatum doloremque ipsum ipsam dolore consectetur praesentium natus laboriosam quo fuga? Laudantium quibusdam commodi exercitationem facilis dolorem ullam rem voluptatem soluta, eveniet aliquid officiis.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="50" rows="8"></textarea> <br>
+        <button id="cmnt-btn">Comment Now</button>
+    </div>
+    <script>    
+    //add event 
+    document.getElementById('cmnt-btn').addEventListener('click', function(){
+    //get the comment
+    const commentBox = document.getElementById('new-comment');
+    const newComment = commentBox.value;
+    
+    //step3 
+    const commentContainer = document.getElementById('comment-container');
+    const p = document.createElement('p');
+    p.innerText = newComment;
+    commentContainer.appendChild(p);
+    //clean comment box
+    commentBox.value = '';
+    });
+    </script>
+</body>
+</html>
