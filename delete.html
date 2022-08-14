@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Delete button</title>
+</head>
+<body>
+    <h1 id="hide-content">Some Content</h1>
+    <input type="text" id="text-field" placeholder="Please Enter delete">
+    <button id="btn-dlt" disabled>Delete</button>
+    <script>
+        document.getElementById('text-field').addEventListener('keyup', function(event){
+           const text= event.target.value;
+           const deleteButtton = document.getElementById('btn-dlt');
+           if(text == 'delete'){
+            deleteButtton.removeAttribute('disabled');
+           }
+           else{
+            deleteButtton.setAttribute('disabled', true);
+           }
+        })
+        document.getElementById('btn-dlt').addEventListener('click', function(){
+            const secret = document.getElementById('hide-content');
+            secret.style.display = 'none';
+        })
+    </script>
+</body>
+</html>
